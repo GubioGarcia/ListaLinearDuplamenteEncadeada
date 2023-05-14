@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>384</width>
+    <height>494</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>9</pointsize>
+   </font>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Lista Linear Duplamente Encadeada</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Arquivos.qrc">
+    <normaloff>:/new/images/Arquivos/OIP.jpeg</normaloff>:/new/images/Arquivos/OIP.jpeg</iconset>
+  </property>
+  <property name="toolTip">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>10</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-style:italic;&quot;&gt;Projeto LLDE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Valor:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>50</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Qtd Elementos:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditQuantidadeElementos">
+    <property name="geometry">
+     <rect>
+      <x>232</x>
+      <y>80</y>
+      <width>131</width>
+      <height>28</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditValor">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>131</width>
+      <height>28</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>310</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Lista:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEditSaida">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>350</y>
+      <width>341</width>
+      <height>85</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>341</width>
+      <height>175</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Inserir&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Acessar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Retirar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="pushButtonInserirInicio">
+         <property name="mouseTracking">
+          <bool>false</bool>
+         </property>
+         <property name="toolTip">
+          <string>Inserir no Inicio</string>
+         </property>
+         <property name="toolTipDuration">
+          <number>-1</number>
+         </property>
+         <property name="whatsThis">
+          <string/>
+         </property>
+         <property name="text">
+          <string>  II</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Arquivos.qrc">
+           <normaloff>:/new/images/Arquivos/incluir.jpg</normaloff>:/new/images/Arquivos/incluir.jpg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonAcessarInicio">
+         <property name="toolTip">
+          <string>Acessar no Inicio</string>
+         </property>
+         <property name="text">
+          <string>  AI</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Arquivos.qrc">
+           <normaloff>:/new/images/Arquivos/acessar.jpg</normaloff>:/new/images/Arquivos/acessar.jpg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonRetirarInicio">
+         <property name="toolTip">
+          <string>Retirar no Inicio</string>
+         </property>
+         <property name="text">
+          <string>  RI</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Arquivos.qrc">
+           <normaloff>:/new/images/Arquivos/retirar.jpg</normaloff>:/new/images/Arquivos/retirar.jpg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="pushButtonInserirFinal">
+         <property name="toolTip">
+          <string>Incluir no Final</string>
+         </property>
+         <property name="text">
+          <string>  IF</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Arquivos.qrc">
+           <normaloff>:/new/images/Arquivos/incluir.jpg</normaloff>:/new/images/Arquivos/incluir.jpg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonAcessarFinal">
+         <property name="toolTip">
+          <string>Acessar no Final</string>
+         </property>
+         <property name="text">
+          <string>  AF</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Arquivos.qrc">
+           <normaloff>:/new/images/Arquivos/acessar.jpg</normaloff>:/new/images/Arquivos/acessar.jpg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonRetirarFinal">
+         <property name="toolTip">
+          <string>Retirar no Final</string>
+         </property>
+         <property name="text">
+          <string>  RF</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Arquivos.qrc">
+           <normaloff>:/new/images/Arquivos/retirar.jpg</normaloff>:/new/images/Arquivos/retirar.jpg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QPushButton" name="pushButtonInserirPosicao">
+         <property name="toolTip">
+          <string>Inserir na Posição</string>
+         </property>
+         <property name="text">
+          <string>  IP</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Arquivos.qrc">
+           <normaloff>:/new/images/Arquivos/incluir.jpg</normaloff>:/new/images/Arquivos/incluir.jpg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonAcessarPosicao">
+         <property name="toolTip">
+          <string>Acessar na Posição</string>
+         </property>
+         <property name="text">
+          <string>  AP</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Arquivos.qrc">
+           <normaloff>:/new/images/Arquivos/acessar.jpg</normaloff>:/new/images/Arquivos/acessar.jpg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonRetirarPosicao">
+         <property name="toolTip">
+          <string>Retirar na Posição</string>
+         </property>
+         <property name="text">
+          <string>  RP</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Arquivos.qrc">
+           <normaloff>:/new/images/Arquivos/retirar.jpg</normaloff>:/new/images/Arquivos/retirar.jpg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButtonOrdenar">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>300</y>
+      <width>141</width>
+      <height>37</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Acessar na Posição</string>
+    </property>
+    <property name="text">
+     <string>  ORDENAR</string>
+    </property>
+    <property name="icon">
+     <iconset resource="Arquivos.qrc">
+      <normaloff>:/new/images/Arquivos/ordenacao.jpg</normaloff>:/new/images/Arquivos/ordenacao.jpg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>384</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="Arquivos.qrc"/>
+ </resources>
+ <connections/>
+</ui>
